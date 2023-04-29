@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20%;
+    margin-left:10%;
+}
+
+.arrow span{
+    transform: rotate(45deg);
+    width: 100px;
+    height: 100px;
+    margin-left: -30px;
+    border-bottom: 30px solid goldenrod;
+    border-left: 30px solid goldenrod;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.arrow span:nth-child(1){
+    animation-delay: 0.3s;
+    translate: -20px 0px;
+}
+
+.arrow span:nth-child(2){
+    animation-delay: 0.4s;
+    translate: -30px 0px;
+}
+
+.arrow span:nth-child(3){
+    animation-delay: 0.5s;
+    translate: -40px 0px;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+        translate: 30px 0px;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        translate: -30px 0px;
+    }
+}
